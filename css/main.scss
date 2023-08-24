@@ -1,0 +1,93 @@
+@use "variables";
+@use "global";
+
+.bg-green {
+  background: var(--bg-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 1.5em;
+}
+
+.upper {
+  text-align: center;
+
+  h1 {
+    font-size: 3.5rem;
+    margin: 0.5em auto;
+    width: 350px;
+  }
+  img {
+    margin: 1.5em 1em;
+  }
+  .left {
+    border-bottom: 1px solid var(--text-color);
+    padding: 2em 0;
+  }
+}
+
+.lower {
+  padding: 3em 0;
+  .download {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    text-align: start;
+  }
+}
+
+aside {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: var(--text-color);
+  width: 60%;
+  padding: 5em;
+  text-align: right;
+  transition: transform 0.5s;
+  transform: translateX(100%);
+
+  .exit {
+    width: 30px;
+    margin-bottom: 2em;
+    border: 2px solid white;
+    border-radius: 4em;
+    padding: 0.4em;
+    cursor: pointer;
+  }
+  nav ul li {
+    margin-bottom: 1.8em;
+
+    list-style: none;
+  }
+  nav ul li a {
+    font-size: 2.6rem !important;
+    text-decoration: none;
+    color: white;
+  }
+}
+
+ 
+
+  .logos {
+    background: var(--text-color);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    place-items: center;
+    gap: 5em;
+    padding: 6em;
+    
+}
+  .logos img {
+    width: 70px;
+  }
+
+  
+
+

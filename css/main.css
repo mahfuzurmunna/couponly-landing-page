@@ -1,0 +1,135 @@
+:root {
+  --primary-color: #95BF81;
+  --text-color: #202020;
+  --bg-color: #E0EDDA;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p, a {
+  font-size: 1.6rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2em 3em;
+}
+
+.hide-mobile {
+  display: none;
+}
+
+.toggle-menu {
+  transform: translateX(0);
+}
+
+.btn-primary {
+  background: var(--primary-color);
+  border-radius: 0.5em;
+  border: 1.5px solid var(--text-color);
+  padding: 1.4em;
+  width: 250px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  place-content: center;
+}
+.btn-primary a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 1.8em;
+}
+
+.bg-green {
+  background: var(--bg-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--text-color);
+  padding-bottom: 1.5em;
+}
+
+.upper {
+  text-align: center;
+}
+.upper h1 {
+  font-size: 3.5rem;
+  margin: 0.5em auto;
+  width: 350px;
+}
+.upper img {
+  margin: 1.5em 1em;
+}
+.upper .left {
+  border-bottom: 1px solid var(--text-color);
+  padding: 2em 0;
+}
+
+.lower {
+  padding: 3em 0;
+}
+.lower .download {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  text-align: start;
+}
+
+aside {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background: var(--text-color);
+  width: 60%;
+  padding: 5em;
+  text-align: right;
+  transition: transform 0.5s;
+  transform: translateX(100%);
+}
+aside .exit {
+  width: 30px;
+  margin-bottom: 2em;
+  border: 2px solid white;
+  border-radius: 4em;
+  padding: 0.4em;
+  cursor: pointer;
+}
+aside nav ul li {
+  margin-bottom: 1.8em;
+  list-style: none;
+}
+aside nav ul li a {
+  font-size: 2.6rem !important;
+  text-decoration: none;
+  color: white;
+}
+
+.logos {
+  background: var(--text-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  gap: 5em;
+  padding: 6em;
+}
+
+.logos img {
+  width: 70px;
+}/*# sourceMappingURL=main.css.map */
