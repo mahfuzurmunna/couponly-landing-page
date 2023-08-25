@@ -5,7 +5,8 @@
   box-sizing: border-box;
 }
 
-p, a {
+p,
+a {
   font-size: 1.6rem;
 }
 
@@ -14,9 +15,15 @@ html {
 }
 
 .container {
-  max-width: 1400px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 2em 3em;
+  position: relative;
+}
+
+.active {
+  font-weight: bold;
+  border-bottom: 1px solid var(--text-color);
 }
 
 .hide-mobile {
@@ -31,9 +38,9 @@ html {
   background: var(--primary-color);
   border-radius: 0.5em;
   border: 1.5px solid var(--text-color);
-  padding: 1.4em;
-  width: 250px;
-  margin: 0 auto;
+  padding: 1em;
+  width: 65%;
+  margin: 2em 0 0 0;
   display: flex;
   align-items: center;
   gap: 1em;
@@ -43,5 +50,5 @@ html {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
-  font-size: 1.8em;
+  font-size: 1.6rem;
 }/*# sourceMappingURL=global.css.map */

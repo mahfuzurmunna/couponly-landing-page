@@ -1,44 +1,60 @@
+/* Define reusable variables */
 @use "variables";
 @use "global";
 
+/* Common styles for background color */
 .bg-green {
   background: var(--bg-color);
 }
 
+/* Header styles */
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--text-color);
-  padding-bottom: 1.5em;
+  padding-bottom: 2em;
 }
 
+/* Upper section styles */
 .upper {
   text-align: center;
 
+  /* Styles for heading */
   h1 {
     font-size: 3.5rem;
     margin: 0.5em auto;
     width: 350px;
   }
+
+  /* Styles for image */
   img {
     margin: 1.5em 1em;
   }
+
+  /* Styles for left section */
   .left {
     border-bottom: 1px solid var(--text-color);
     padding: 2em 0;
   }
 }
 
+/* Lower section styles */
 .lower {
   padding: 3em 0;
+
+  /* Styles for download section */
   .download {
     display: flex;
+    gap: 2em;
+    margin-bottom: 2em;
     align-items: center;
-    width: 80%;
+    width: 85%;
     text-align: start;
   }
 }
 
+/* Aside (sidebar) styles */
 aside {
   position: fixed;
   z-index: 999;
@@ -52,6 +68,7 @@ aside {
   transition: transform 0.5s;
   transform: translateX(100%);
 
+  /* Exit button styles */
   .exit {
     width: 30px;
     margin-bottom: 2em;
@@ -60,9 +77,10 @@ aside {
     padding: 0.4em;
     cursor: pointer;
   }
+
+  /* Navigation styles */
   nav ul li {
     margin-bottom: 1.8em;
-
     list-style: none;
   }
   nav ul li a {
@@ -72,22 +90,329 @@ aside {
   }
 }
 
- 
-
-  .logos {
-    background: var(--text-color);
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-    place-items: center;
-    gap: 5em;
-    padding: 6em;
-    
+/* Logos section styles */
+.logos {
+  background: var(--text-color);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  gap: 5em;
+  padding: 6em;
 }
-  .logos img {
-    width: 70px;
+
+/* Logo image styles */
+.logos img {
+  width: 70px;
+}
+
+/* Reusable styles for item boxes */
+.item {
+  border: solid 1px var(--text-color);
+  border-radius: 0.5em;
+  position: relative;
+  margin-bottom: 3em;
+
+  /* Span styles (background and text) */
+  span {
+    background: white;
+    p {
+      padding: 1.5em;
+      font-weight: 700;
+      font-size: 1.8rem;
+    }
   }
 
+  /* Image styles */
+  img {
+    width: 100%;
+    height: 250px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+
+  /* Price tag styles */
+  .price {
+    position: absolute;
+    background: var(--text-color);
+    color: white;
+    padding: 1.2em 1.6em;
+    bottom: 0;
+    right: 0;
+  }
+}
+
+// footer starts
+
+footer {
+  background-color: var(--bg-color);
+  margin-top: 1em;
+  .footer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2em;
+    justify-content: space-between;
+
+    .left-col {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      .store {
+        display: flex;
+        gap: 2em;
+
+        .gplay {
+          width: 100px;
+        }
+      }
+    }
+
+    .right-col {
+      display: flex;
+      flex-direction: column;
+      gap: 3em;
+      align-items: flex-end;
+      nav ul {
+        display: flex;
+        gap: 2em;
+      }
+      nav ul li {
+        list-style: none;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .social-media {
+    display: flex;
+    gap: 2em;
+    img {
+      width: 30px;
+    }
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .container {
+    padding-bottom: 0;
+  }
+  .hide-tablet {
+    display: none;
+  }
+  .hide-mobile {
+    display: unset;
+  }
+
+  header {
+    nav ul {
+      display: flex;
+      gap: 2.5em;
+      align-items: center;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: var(--text-color);
+        }
+      }
+    }
+    .btn-header {
+      background: var(--primary-color);
+      padding: 1.2em 1.5em;
+      border: 1.6px solid var(--text-color);
+      border-radius: 0.5em;
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+
+        color: var(--text-color);
+      }
+    }
+  }
+
+  .hero-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 3em;
+  }
+  .upper {
+    border-right: 1px solid var(--text-color);
+    text-align: start;
+    flex: 1;
+
+    .review {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+      margin-top: 2em;
+      padding-bottom:4em;
+    }
+    .left {
+      border-bottom: unset;
+      img {
+        width: 150px;
+        margin: 1em 0;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .right {
+      background: white;
+      height: 63px;
+      border-radius: 5em;
+      padding: 0.5em;
+
+      display: flex;
+      align-items: center;
+      strong {
+        padding: 0 1em 0 0;
+      }
+
+      p {
+        font-size: 1.4rem;
+        color: var(--primary-color);
+      }
+
+      img {
+        width: 50px;
+        margin: 0 0.5em;
+      }
+    }
+
+    h1 {
+      font-size: 2.9rem;
+      margin: 1.3em 0 0.5em 0;
+    }
+  }
+  .logos {
+    // padding: 5em 35em;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 5em;
+
+  }
+
+  .shop-item {
+    display: grid;
+    grid-template-columns: 2fr repeat(2,1fr);
+    gap: 2em;
+    grid-area:
+    ""
+    ;
+  }
+  .lower {
+    font-size: 1.4rem;
+    flex: 1;
+
+    .download {
+      gap: 1em;
+      margin-bottom: 1.2em;
+    }
+
+    img {
+      width: 30px;
+    }
+  }
+}
+
+
+@media only screen and (min-width: 1100px) {
+  .hero-section {
+    flex-direction: column;
+
+    .upper {
+      border-right: none;
+         h1 {
+        font-size: 4.4rem;
+        width: 90%;
+     
+      }
+
+      .review {
+        
+        gap: 3em;
+        .left { 
+          p {
+            font-size: 1.8rem;
+          }
+          img {
+            width: 300px;
+          }
+        }
+
+        .right {
+          height: 100px;
+          padding: .5em;
+           strong{
+            font-size: 1.8rem;
+           }
+           p {
+           font-size: 1.6rem;
+           margin-top: .5em;
+           }
+          img {
+            width: 80px;
+            
+          }
+        }
+      }
+
+   
+    }
+    .lower {
   
 
+      .features {
+        display: flex;
+        gap: 6em;
+        justify-content: space-between;
+        .download {
+          flex-direction: column;
+          align-items: start;
+          gap: 1.5em;
+          img {
+            width: 50px;
+          }
+          p {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  } 
+  .logos {
+    padding: 5em 35em;
+   display: flex;
+   justify-content: space-between;
+   padding-bottom: 5em;
 
+  }
+
+  .shop-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3em;
+  text-align: center;
+  }
+
+  footer {
+    margin-top: 5em;
+  }
+
+  .btn-primary {
+    width: 200px;
+    margin: 3em 0 3em 0;
+  }
+}
